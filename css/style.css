@@ -16,6 +16,7 @@
   --primary-wight-color: #ffffff;
   --second-bgc-color: #2f303a;
   --third-bgc-color: #f5f4fa;
+  --icon-color: #afb1b8;
 }
 body {
   width: 100%;
@@ -114,7 +115,9 @@ img {
   margin-left: 50px;
 }
 .contact {
-  display: block;
+  /* display: block; */
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -124,14 +127,33 @@ img {
   font-size: 14px;
   line-height: 1.14;
 }
+.contact-icon {
+  fill: currentColor;
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+}
 
 .contact:hover,
 .contact:focus {
   color: var(--accent-text-color);
 }
+
 /* Шапка */
 
 .hero {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1600px;
+  height: 600px;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/fon.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding-top: 200px;
   padding-bottom: 200px;
 
@@ -176,14 +198,6 @@ img {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-
-/* .section {
-  padding-top: 94px;
-}
-.section:last-child {
-  padding-bottom: 94px;
-} */
-
 .list {
   margin-top: 0;
   margin-bottom: 0;
@@ -198,6 +212,21 @@ img {
 }
 .work-list:nth-child(4n) {
   margin-right: 0;
+}
+.bgc-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+
+  background-color: var(--third-bgc-color);
+}
+.work-icon {
+  width: 70px;
+  height: 70px;
 }
 .title-container {
   margin-top: 0;
@@ -239,7 +268,8 @@ img {
   text-align: center;
 }
 .command-content {
-  padding: 30px;
+  padding-top: 30px;
+  padding-bottom: 16px;
 }
 .title-name {
   display: flex;
@@ -260,6 +290,73 @@ img {
 
   font-size: 16px;
   line-height: 1.87;
+}
+.list.command.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.list-command-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin-right: 10px;
+
+  color: var(--icon-color);
+}
+.list-command-icon:last-child {
+  margin-right: 0;
+}
+.list-command-icon:focus,
+.list-command-icon:hover {
+  background-color: var(--accent-text-color);
+  color: var(--primary-wight-color);
+}
+.command-icon {
+  width: 20px;
+  height: 20px;
+
+  fill: currentColor;
+}
+.command-icon:hover,
+.command-icon:focus {
+  fill: var(--primary-wight-color);
+}
+.list.customer {
+  display: flex;
+}
+.list-customer-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+}
+.list-customer-icon:last-child {
+  margin-right: 0;
+}
+.link-customer-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  color: var(--icon-color);
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+.customer-icon {
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
+}
+.link-customer-icon:hover,
+.link-customer-icon:focus {
+  color: var(--accent-text-color);
+  border: 1px solid var(--accent-text-color);
 }
 footer {
   padding: 60px 0;
